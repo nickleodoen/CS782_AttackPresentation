@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win Prizes Now!</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ebebeb;
+        position: relative;
+      }
+      .header {
+        background-color: #4caf50;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      .container {
+        background: white;
+        margin: 20px auto;
+        width: 80%;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        text-align: center;
+        position: relative;
+        z-index: 1; /* Ensuring it is above the iframe */
+      }
+      .legit-banner {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .prize-button {
+        background-color: #f44336;
+        color: white;
+        padding: 15px 32px;
+        margin: 30px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .prize-button:hover {
+        background-color: #d32f2f;
+      }
+      .info {
+        padding: 0 20px;
+      }
+      .info p {
+        color: #555;
+      }
+      .info h2 {
+        color: #333;
+        margin: 0;
+      }
+      iframe {
+        position: absolute;
+        top: 50px; /* Adjust this value based on actual alignment needs */
+        left: calc(
+          10% + 290px
+        ); /* Adjust this to match the left alignment of the button in the iframe */
+        width: 600px; /* Match the width of the container */
+        height: 350px; /* Just enough to include the button */
+        border: none;
+        opacity: 0;
+        z-index: 2; /* Ensuring it is above the container for interaction */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Win Amazing Prizes Instantly!</h1>
+    </div>
+    <div class="container">
+      <div class="legit-banner">This is Totally a Legit Website</div>
+      <div class="info">
+        <h2>Today's Your Lucky Day!</h2>
+        <p>
+          Feeling lucky? You should! Click below and you could be on your way to
+          winning fabulous prizes. Vacations, cars, gadgets, and more are just a
+          click away!
+        </p>
+        <button class="prize-button" onclick="winPrizes()">
+          CLICK TO WIN PRIZES
+        </button>
+      </div>
+    </div>
+    <!-- Embedding the social media page iframe -->
+    <iframe src="http://localhost:8000/social_media.html"></iframe>
+
+    <script>
+      function winPrizes() {
+        alert(
+          "Did you really think it was that easy to win prizes? Always be wary of clickbait!"
+        );
+      }
+    </script>
+  </body>
+</html>

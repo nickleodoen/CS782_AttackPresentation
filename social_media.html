@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiscoSocial</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
+      .navbar {
+        background-color: rgb(181, 39, 30);
+        overflow: hidden;
+        color: white;
+      }
+      .navbar a,
+      .navbar h1 {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      .navbar h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .post {
+        background: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .like-button {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 32px; /* Increased padding to make the button larger */
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        font-size: 20px; /* Larger font size to fill the increased button size */
+        display: block; /* Make the button block level to match the width adjustment */
+        width: 100%; /* Make the button extend full width of its container */
+      }
+      .like-button:hover {
+        background-color: #45a049;
+      }
+      .like-counter {
+        color: #555;
+        margin-left: 10px;
+      }
+    </style>
+    <script>
+      function increaseLike() {
+        var counter = document.getElementById("likeCounter");
+        var currentLikes = parseInt(counter.innerText, 10);
+        counter.innerText = currentLikes + 1;
+        alert("You liked @BuckyBadger's post on WiscoSocial!");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>WiscoSocial</h1>
+      <a href="#">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Messages</a>
+      <a href="#">Notifications</a>
+    </div>
+    <div class="post">
+      <h2>@BuckyBadger's Post</h2>
+      <p>
+        Hello WiscoSocial world! This is a totally legit social media site. You
+        have to believe me.
+      </p>
+      <button class="like-button" onclick="increaseLike()">Like</button>
+      <span id="likeCounter" class="like-counter">0</span>
+    </div>
+  </body>
+</html>
